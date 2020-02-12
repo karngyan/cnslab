@@ -6,6 +6,7 @@
 *.lo
 *.o
 *.obj
+*.exe
 
 # Precompiled Headers
 *.gch
@@ -30,3 +31,11 @@
 *.exe
 *.out
 *.app
+
+  
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
