@@ -41,8 +41,8 @@ public:
         int key_size = key.size();
 
         for (int i = 0 ; i < n ; ++i) {
-            char x = ((this->message[i] - 'a') + (key[j] - 'a')) % 26;
-            this->cipher += (x + 'a');
+            char x = ((this->message[i] - 'A') + (key[j] - 'A')) % 26;
+            this->cipher += (x + 'A');
             j++;
             j%=key_size;
         }
@@ -83,8 +83,8 @@ public:
         int key_size = key.size();
 
         for (int i = 0 ; i < n ; ++i) {
-            char x = ((this->cipher[i] - 'a') - (key[j] - 'a') + 26) % 26;
-            this->message += (x + 'a');
+            char x = ((this->cipher[i] - 'A') - (key[j] - 'A') + 26) % 26;
+            this->message += (x + 'A');
             j++;
             j%=key_size;
         }
@@ -101,6 +101,9 @@ signed main() {
 
     string message = "bitmesra";
     string key = "ab";
+
+    _capitalise(message);
+    _capitalise(key);
 
     message = _remove_spaces(message);
     key = _remove_spaces(key);

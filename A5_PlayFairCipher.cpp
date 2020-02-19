@@ -21,8 +21,8 @@ class Encoder {
     void make_matrix() {
         set<char> alpha;
         for(int i = 0 ; i < 26 ; ++i) {
-            char c = i + 'a';
-            if (c == 'j') continue;
+            char c = i + 'A';
+            if (c == 'J') continue;
             alpha.insert(c);
         }
 
@@ -97,14 +97,14 @@ public:
             } else {
                 char c = new_p[new_p.size() - 1];
                 if (p[i] == c) {
-                    new_p += 'x';
+                    new_p += 'X';
                 }
 
                 new_p += p[i];
             }
         }
 
-        if (new_p.size()&1) new_p += 'z';
+        if (new_p.size()&1) new_p += 'Z';
         p = new_p;
         n = p.size();
         while(i+1 < n) {
@@ -186,8 +186,8 @@ class Decoder {
     void make_matrix() {
         set<char> alpha;
         for(int i = 0 ; i < 26 ; ++i) {
-            char c = i + 'a';
-            if (c == 'j') continue;
+            char c = i + 'A';
+            if (c == 'J') continue;
             alpha.insert(c);
         }
 
@@ -271,8 +271,8 @@ public:
             }
         }
 
-        this->remove_char(this->message, 'x');
-        this->remove_char(this->message, 'z');
+        this->remove_char(this->message, 'X');
+        this->remove_char(this->message, 'Z');
     }
 
 };
@@ -287,6 +287,8 @@ signed main() {
 
     string message = "balle balle balle balle";
     string key = "shaava shaava";
+    _capitalise(message);
+    _capitalise(key);
 
     message = _remove_spaces(message);
     key = _remove_spaces(key);
@@ -294,9 +296,9 @@ signed main() {
     _check_lower_case(message);
     _check_lower_case(key);
 
-    if (_check_specific_char(message, 'x') 
-            or _check_specific_char(message, 'z')) {
-        cerr << "No x/z allowed.";
+    if (_check_specific_char(message, 'X') 
+            or _check_specific_char(message, 'Z')) {
+        cerr << "No X/Z allowed.";
         exit(1);
     };
 

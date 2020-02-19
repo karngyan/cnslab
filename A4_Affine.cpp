@@ -44,8 +44,8 @@ public:
         int key2 = this->key2;
         this->cipher.clear();
         for (int i = 0 ; i < n ; ++i) {
-            char x = (((this->message[i] - 'a') * key1)%26 + key2) % 26;
-            this->cipher += (x + 'a');
+            char x = (((this->message[i] - 'A') * key1)%26 + key2) % 26;
+            this->cipher += (x + 'A');
         }
     }
 };
@@ -100,8 +100,8 @@ public:
         this->message.clear();
 
         for (int i = 0 ; i < n ; ++i) {
-            char x = (((this->cipher[i] - 'a') - key2 + 26)%26*key1_inverse%26) % 26;
-            this->message += (x + 'a');
+            char x = (((this->cipher[i] - 'A') - key2 + 26)%26*key1_inverse%26) % 26;
+            this->message += (x + 'A');
         }
     }
 };
@@ -118,6 +118,7 @@ signed main() {
 
     string message = "abcd";
     int key1 = 1, key2 = 3;
+    _capitalise(message);
 
     message = _remove_spaces(message);
     _check_lower_case(message);

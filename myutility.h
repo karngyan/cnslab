@@ -7,25 +7,24 @@ std::ostream& operator<<(std::ostream& _os, const std::pair<_Ty1, _Ty2>& _p) {
     return _os;
 }
 
-string _remove_spaces(string s) {
-    string ans = "";
-    for (auto it: s) {
-        if (it != ' ') ans += it;
+void _capitalise(string &s) {
+    for (auto &it: s) {
+        if (it >= 'a' and it <= 'z') {
+            it = it - 'a' + 'A';
+        }
     }
-    return ans;
 }
 
-void _check_lower_case(string &s) {
-    for (auto it : s) {
-        if (it == ' ') {
-            s.erase(it);
-            continue;
-        }
-        if (it < 'a' or it > 'z') {
-            cout << "Program only supports lower case characters currently.";
-            exit(1);
-        }
+string _remove_spaces(string s) {
+    // legacy
+    // now it removes anything thats not a
+    // capital letter
+    string ans = "";
+    for (auto it: s) {
+        if (it >= 'A' and it <= 'Z') 
+            ans += it;
     }
+    return ans;
 }
 
 bool _check_specific_char(string &s, char c) {

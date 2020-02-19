@@ -3,6 +3,7 @@ Author: @karngyan
 */
 
 #include<bits/stdc++.h>
+#include "myutility.h"
 using namespace std;
 #define endl '\n'
 
@@ -36,8 +37,8 @@ public:
         int key = this->key;
         this->cipher.clear();
         for (int i = 0 ; i < n ; ++i) {
-            char x = ((this->message[i] - 'a') + key) % 26;
-            this->cipher += (x + 'a');
+            char x = ((this->message[i] - 'A') + key) % 26;
+            this->cipher += (x + 'A');
         }
     }
 };
@@ -74,8 +75,8 @@ public:
         this->message.clear();
 
         for (int i = 0 ; i < n ; ++i) {
-            char x = ((this->cipher[i] - 'a') - key + 26) % 26;
-            this->message += (x + 'a');
+            char x = ((this->cipher[i] - 'A') - key + 26) % 26;
+            this->message += (x + 'A');
         }
     }
 };
@@ -90,6 +91,8 @@ signed main() {
 
     string message = "abcd";
     int key = 2;
+
+    _capitalise(message);
 
     Encoder *  encoder = new  Encoder(message, key);
     encoder->encode();
