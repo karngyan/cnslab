@@ -279,12 +279,6 @@ public:
 
 signed main() {
 
-    // freopen("in", "r", stdin);
-    // string message;
-    // cin >> message;
-    // string key;
-    // cin >> key;
-
     string message = "balle balle balle balle";
     string key = "shaava shaava";
     _capitalise(message);
@@ -292,9 +286,6 @@ signed main() {
 
     message = _remove_spaces(message);
     key = _remove_spaces(key);
-
-    _check_lower_case(message);
-    _check_lower_case(key);
 
     if (_check_specific_char(message, 'X') 
             or _check_specific_char(message, 'Z')) {
@@ -312,21 +303,21 @@ signed main() {
 
     encoder->encode();
 
-    cout << "\nMatrix: " ;encoder->show_matrix(); cout <<  endl;
-    cout << "Pairs: ";encoder->show_pairs(); cout << endl;
-    string cipher = encoder->get_cipher();
-    cout << "Cipher: \n"; 
-    for (int i = 0 ; i < cipher.size() ; ++i) {
-        cout << cipher[i];
-        if (i%2 == 1) 
-            cout << " ";
-    } cout << endl;
+    // cout << "\nMatrix: " ;encoder->show_matrix(); cout <<  endl;
+    // cout << "Pairs: ";encoder->show_pairs(); cout << endl;
+    // string cipher = encoder->get_cipher();
+    // cout << "Cipher: \n"; 
+    // for (int i = 0 ; i < cipher.size() ; ++i) {
+    //     cout << cipher[i];
+    //     if (i%2 == 1) 
+    //         cout << " ";
+    // } cout << endl;
 
 
-    Decoder *  decoder = new  Decoder(encoder->get_cipher(), key);
-    decoder->decode();
-    cout << "\nDecoding Process: \n";
-    cout << "Message: " <<  decoder->get_message() << endl;
+    // Decoder *  decoder = new  Decoder(encoder->get_cipher(), key);
+    // decoder->decode();
+    // cout << "\nDecoding Process: \n";
+    // cout << "Message: " <<  decoder->get_message() << endl;
 
 
     return 0;

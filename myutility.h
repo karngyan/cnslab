@@ -15,10 +15,12 @@ void _capitalise(string &s) {
     }
 }
 
+
+// legacy
+// now it removes anything thats not a
+// capital letter
 string _remove_spaces(string s) {
-    // legacy
-    // now it removes anything thats not a
-    // capital letter
+
     string ans = "";
     for (auto it: s) {
         if (it >= 'A' and it <= 'Z') 

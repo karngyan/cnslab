@@ -108,20 +108,12 @@ public:
 
 signed main() {
 
-    // freopen("in", "r", stdin);
-    // string message;
-    // cin >> message;
-    // int key1;
-    // int key2;
-    // cin >> key1;
-    // cin >> key2;
-
     string message = "abcd";
     int key1 = 1, key2 = 3;
     _capitalise(message);
 
     message = _remove_spaces(message);
-    _check_lower_case(message);
+    _capitalise(message);
 
 
     Encoder *  encoder = new  Encoder(message, key1, key2);

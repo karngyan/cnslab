@@ -83,12 +83,6 @@ public:
 
 signed main() {
 
-    // freopen("in", "r", stdin);
-    // string message;
-    // cin >> message;
-    // int key;
-    // cin >> key;
-
     string message = "abcd";
     int key = 2;
 
