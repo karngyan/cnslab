@@ -42,6 +42,9 @@ signed main() {
     string password = "AbcdfGdjh23@";
     
     check_password_strength(password);
-
+    /**
+    Output:
+    Strength of password: Strong
+    **/
     return 0;
 }

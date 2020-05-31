@@ -85,12 +85,6 @@ public:
 
 signed main() {
 
-    // freopen("in", "r", stdin);
-    // string message;
-    // cin >> message;
-    // int key;
-    // cin >> key;
-
     string message = "abcd";
     int key = 1;
 
@@ -111,7 +105,18 @@ signed main() {
     cout << "K: " <<  decoder->get_key() << endl;
     cout << "M: " <<  decoder->get_message() << endl;
 
+    /**
+    Output:
+    Encoding Process: 
+    M: ABCD
+    K: 1
+    C: BBDF
 
+    Decoding Process: 
+    C: BBDF
+    K: 1
+    M: ABCD
+    **/
 
     return 0;
 }

@@ -130,8 +130,19 @@ signed main() {
     cout << "K1: " <<  decoder->get_key_one() << " K2: " << decoder->get_key_two() << endl;
     cout << "M: " <<  decoder->get_message() << endl;
 
+    /**
+    Output:
+    Encoding Process: 
+    M: ABCD
+    K1: 1 K2: 3
+    C: DEFG
 
-
+    Decoding Process: 
+    C: DEFG
+    K1: 1 K2: 3
+    M: ABCD
+    **/
+    
     return 0;
 }
 

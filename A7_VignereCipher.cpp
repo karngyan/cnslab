@@ -93,12 +93,6 @@ public:
 
 signed main() {
 
-    // freopen("in", "r", stdin);
-    // string message;
-    // cin >> message;
-    // string key;
-    // cin >> key;
-
     string message = "bitmesra";
     string key = "ab";
 
@@ -107,9 +101,6 @@ signed main() {
 
     message = _remove_spaces(message);
     key = _remove_spaces(key);
-
-    _check_lower_case(message);
-    _check_lower_case(key);
 
     Encoder *  encoder = new  Encoder(message, key);
     encoder->encode();
@@ -124,6 +115,19 @@ signed main() {
     cout << "C: " <<  decoder->get_cipher() << endl;
     cout << "K: " <<  decoder->get_key() << endl;
     cout << "M: " <<  decoder->get_message() << endl;
+
+    /**
+    Output:
+    Encoding Process: 
+    M: BITMESRA
+    K: AB
+    C: BJTNETRB
+
+    Decoding Process: 
+    C: BJTNETRB
+    K: AB
+    M: BITMESRA
+    **/
 
 
 

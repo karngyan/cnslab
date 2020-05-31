@@ -102,6 +102,18 @@ signed main() {
     cout << "K: " <<  decoder->get_key() << endl;
     cout << "M: " <<  decoder->get_message() << endl;
 
+    /**
+    Output:
+    Encoding Process: 
+    M: ABCD
+    K: 2
+    C: CDEF
+
+    Decoding Process: 
+    C: CDEF
+    K: 2
+    M: ABCD
+    **/
 
 
     return 0;

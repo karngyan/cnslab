@@ -181,12 +181,6 @@ public:
 
 signed main() {
 
-    // freopen("in", "r", stdin);
-    // string message;
-    // cin >> message;
-    // string key;
-    // cin >> key;
-
     string message = "WE ARE DISCOVERED. FLEE AT ONCE.";
     string key = "ZEBRAS";
 
@@ -218,7 +212,34 @@ signed main() {
     cout << "M: " <<  decoder->get_message() << endl;
 
 
+    /**
+    Output:
+    Encoding Process: 
 
+    Column: 
+    6 3 2 4 1 5 
+    W E A R E D 
+    I S C O V E 
+    R E D F L E 
+    E A T O N C 
+    E K I R V M 
+    M: WEAREDISCOVEREDFLEEATONCE
+    K: ZEBRAS
+    C: EVLNV ACDTI ESEAK ROFOR DEECM WIREE 
+
+    Decoding Process: 
+
+    Column: 
+    6 3 2 4 1 5 
+    W E A R E D 
+    I S C O V E 
+    R E D F L E 
+    E A T O N C 
+    E K I R V M 
+    C: EVLNVACDTIESEAKROFORDEECMWIREE
+    K: ZEBRAS
+    M: WEAREDISCOVEREDFLEEATONCEKIRVM
+    **/
 
 
     return 0;

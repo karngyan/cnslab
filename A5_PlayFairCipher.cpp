@@ -303,22 +303,46 @@ signed main() {
 
     encoder->encode();
 
-    // cout << "\nMatrix: " ;encoder->show_matrix(); cout <<  endl;
-    // cout << "Pairs: ";encoder->show_pairs(); cout << endl;
-    // string cipher = encoder->get_cipher();
-    // cout << "Cipher: \n"; 
-    // for (int i = 0 ; i < cipher.size() ; ++i) {
-    //     cout << cipher[i];
-    //     if (i%2 == 1) 
-    //         cout << " ";
-    // } cout << endl;
+    cout << "\nMatrix: " ;encoder->show_matrix(); cout <<  endl;
+    cout << "Pairs: ";encoder->show_pairs(); cout << endl;
+    string cipher = encoder->get_cipher();
+    cout << "Cipher: \n"; 
+    for (int i = 0 ; i < cipher.size() ; ++i) {
+        cout << cipher[i];
+        if (i%2 == 1) 
+            cout << " ";
+    } cout << endl;
 
 
-    // Decoder *  decoder = new  Decoder(encoder->get_cipher(), key);
-    // decoder->decode();
-    // cout << "\nDecoding Process: \n";
-    // cout << "Message: " <<  decoder->get_message() << endl;
+    Decoder *  decoder = new  Decoder(encoder->get_cipher(), key);
+    decoder->decode();
+    cout << "\nDecoding Process: \n";
+    cout << "Message: " <<  decoder->get_message() << endl;
 
+    /**
+    Output:
+    Encoding Process: 
+    M: BALLEBALLEBALLEBALLE
+    K: SHAAVASHAAVA
+
+    Matrix: 
+
+    S H A V B
+    C D E F G
+    I K L M N
+    O P Q R T
+    U W X Y Z
+
+
+    Pairs: 
+    BA LX LE BA LX LE BA LX LE BA LX LE 
+
+    Cipher: 
+    SV QA QL SV QA QL SV QA QL SV QA QL 
+
+    Decoding Process: 
+    Message: BALLEBALLEBALLEBALLE
+    **/
 
     return 0;
 }
