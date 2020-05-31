@@ -1,3 +1,6 @@
+/*
+Author: @karngyan
+*/
 #include<bits/stdc++.h>
 #include "myutility.h"
 // -std=c++14

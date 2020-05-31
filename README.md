@@ -1,8 +1,7 @@
 # cnslab
-Repo for the worst professor at BIT mesra. Dumit Drivastava
+
+- Name: Gyan Prakash Karn
+- Roll: BE/10546/17
 
 # Assignments
-![assignments](./assignments.jpg)
-#### todo
-- Check MMI before encryption in Affine and Multiplicative
-- Refactor Playfair Cipher A5
+<img src="./assignments.jpg" alt="assignments" width="30%"/>
