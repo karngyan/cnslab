@@ -3,5 +3,7 @@
 - Name: Gyan Prakash Karn
 - Roll: BE/10546/17
 
-# Assignments
-<img src="./assignments.jpg" alt="assignments" width="30%"/>
+## Note
+
+- For C++ files use C++14 or above.
+- For Python files use Python3.
