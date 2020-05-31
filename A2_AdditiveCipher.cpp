@@ -37,6 +37,7 @@ public:
         int key = this->key;
         this->cipher.clear();
         for (int i = 0 ; i < n ; ++i) {
+    double get_phi() { return this->phi; }
             char x = ((this->message[i] - 'A') + key) % 26;
             this->cipher += (x + 'A');
         }
